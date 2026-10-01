@@ -1,7 +1,8 @@
 from pathlib import Path
+import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "jaca-perfumeria-pia-secret-key"
-DEBUG = True
+DEBUG = os.environ.get("RENDER") is None
 ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     "django.contrib.admin","django.contrib.auth","django.contrib.contenttypes",
