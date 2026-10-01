@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Mándanos tu perfume | JACA{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+
+            <div class="upload-page">
+
+                <div class="eyebrow">JACA PERFUMES</div>
+
+                <h1>Mándanos tu perfume</h1>
+
+                <p class="upload-intro">
+                    ¿Tienes un perfume que te encanta?
+                    Envíanos una foto y compártelo con JACA.
+                </p>
+
+                <form method="post" enctype="multipart/form-data" class="form-card">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="{{ form.nombre.id_for_label }}" class="form-label">
+                            Tu nombre
+                        </label>
+                        {{ form.nombre }}
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="{{ form.archivo.id_for_label }}" class="form-label">
+                            Foto de tu perfume
+                        </label>
+                        {{ form.archivo }}
+                        <div class="form-text">
+                            Puedes enviar una foto de tu perfume o fragancia favorita.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark w-100">
+                        Enviar foto
+                    </button>
+                </form>
+
+                <div class="upload-thanks">
+                    <strong>¡Gracias por compartir tu fragancia con JACA!</strong>
+                    <p>Tu recomendación puede formar parte de nuestra colección.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

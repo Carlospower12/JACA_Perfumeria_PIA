@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}JACA Perfumería | Inicio{% endblock %}
+{% block content %}
+<section class="hero"><div class="container"><div class="row align-items-center">
+<div class="col-lg-7 py-5"><div class="eyebrow">PERFUMERÍA & ESTILO</div><h1>Tu aroma.<br><em>Tu esencia.</em></h1>
+<p class="lead">Descubre fragancias para acompañar cada momento y expresar tu personalidad.</p>
+<a href="{% url 'perfumes' %}" class="btn btn-dark btn-lg">Explorar perfumes</a></div>
+<div class="col-lg-5 d-none d-lg-flex bottle-area"><div class="cap"></div><div class="bottle"><b>JACA</b><small>PERFUMES</small></div></div>
+</div></div></section>
+<div class="container py-5"><div class="heading"><span>COLECCIÓN</span><h2>Fragancias destacadas</h2></div>
+<div class="row g-4">
+{% for p in perfumes %}<div class="col-md-4"><article class="product"><div class="product-img">JACA</div><div class="p-4"><small>{{p.marca}} · {{p.categoria}}</small><h3>{{p.nombre}}</h3><p>{{p.descripcion}}</p><strong>${{p.precio}}</strong></div></article></div>{% empty %}
+{% for p in perfumes_json %}<div class="col-md-4"><article class="product"><div class="product-img">{{p.categoria|upper}}</div><div class="p-4"><small>JACA · {{p.categoria}}</small><h3>{{p.nombre}}</h3><p>{{p.descripcion}}</p><strong>${{p.precio}}</strong></div></article></div>{% endfor %}{% endfor %}
+</div></div>
+{% endblock %}

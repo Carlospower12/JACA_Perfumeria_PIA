@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Noir Élégance",
+    "marca": "JACA",
+    "categoria": "Eau de Parfum",
+    "descripcion": "Una fragancia elegante con notas cálidas y sofisticadas.",
+    "precio": "1299.00"
+  },
+  {
+    "nombre": "Velvet Bloom",
+    "marca": "JACA",
+    "categoria": "Floral",
+    "descripcion": "Aroma floral suave y moderno para un estilo delicado.",
+    "precio": "1099.00"
+  },
+  {
+    "nombre": "Oud Intense",
+    "marca": "JACA",
+    "categoria": "Amaderada",
+    "descripcion": "Notas profundas y envolventes inspiradas en maderas exclusivas.",
+    "precio": "1499.00"
+  },
+  {
+    "nombre": "Citrus Fresh",
+    "marca": "JACA",
+    "categoria": "Fresca",
+    "descripcion": "Fragancia ligera, limpia y refrescante para todos los días.",
+    "precio": "899.00"
+  },
+  {
+    "nombre": "Midnight Rose",
+    "marca": "JACA",
+    "categoria": "Floral",
+    "descripcion": "Flores intensas con un toque dulce y sofisticado.",
+    "precio": "1199.00"
+  },
+  {
+    "nombre": "Ocean Blue",
+    "marca": "JACA",
+    "categoria": "Acuática",
+    "descripcion": "Aroma fresco y acuático para un estilo relajado.",
+    "precio": "999.00"
+  }
+]

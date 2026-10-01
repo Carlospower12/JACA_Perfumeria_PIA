@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}Catálogo | JACA Perfumería{% endblock %}
+{% block content %}
+<div class="container py-5">
+
+    <div class="heading">
+        <span>CATÁLOGO</span>
+        <h1>Encuentra tu fragancia</h1>
+        <p>Explora nuestra colección.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- PERFUMES DE LA BASE DE DATOS -->
+        {% for p in perfumes %}
+
+        <div class="col-md-6 col-lg-4">
+
+            <article class="product">
+
+                <div class="product-img">
+                    JACA
+                </div>
+
+                <div class="p-4">
+
+                    <small>
+                        {{ p.marca }} · {{ p.categoria }}
+                    </small>
+
+                    <h3>
+                        {{ p.nombre }}
+                    </h3>
+
+                    <p>
+                        {{ p.descripcion }}
+                    </p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <strong>
+                            ${{ p.precio }}
+                        </strong>
+
+                        <a href="{% url 'detalle_perfume' 'db' p.id %}"
+                           class="btn btn-outline-dark btn-sm">
+                            Consultar
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        {% endfor %}
+
+
+        <!-- PERFUMES DEL JSON -->
+        {% for p in perfumes_json %}
+
+        <div class="col-md-6 col-lg-4">
+
+            <article class="product">
+
+                <div class="product-img">
+                    {{ p.categoria|upper }}
+                </div>
+
+                <div class="p-4">
+
+                    <small>
+                        JACA · {{ p.categoria }}
+                    </small>
+
+                    <h3>
+                        {{ p.nombre }}
+                    </h3>
+
+                    <p>
+                        {{ p.descripcion }}
+                    </p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <strong>
+                            ${{ p.precio }}
+                        </strong>
+
+                        <a href="{% url 'detalle_perfume' 'json' forloop.counter0 %}"
+                           class="btn btn-outline-dark btn-sm">
+                            Consultar
+                        </a>
+
+                    </div>
+
+                    <span class="badge bg-light text-dark mt-3">
+                        Datos dinámicos
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: jaca-perfumeria
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn perfumeria.wsgi:application"

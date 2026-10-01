@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Contacto | JACA Perfumería{% endblock %}
+{% block content %}
+<div class="container py-5"><div class="row justify-content-center"><div class="col-lg-7">
+<div class="eyebrow">CONTÁCTANOS</div><h1>¿Buscas una fragancia?</h1><p>Envíanos tus dudas sobre perfumes, disponibilidad o precios.</p>
+<form method="post" class="form-card">{% csrf_token %}{{form.as_p}}<button class="btn btn-dark w-100">Enviar mensaje</button></form>
+</div></div></div>
+{% endblock %}

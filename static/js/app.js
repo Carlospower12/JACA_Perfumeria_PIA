@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("form").forEach(form=>form.addEventListener("submit",e=>{let ok=true;form.querySelectorAll("input[required],textarea[required]").forEach(x=>{if(!x.value.trim()){x.classList.add("is-invalid");ok=false}else{x.classList.remove("is-invalid")}});if(!ok)e.preventDefault()}))});

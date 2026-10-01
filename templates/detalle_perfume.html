@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{ perfume.nombre }} | JACA Perfumería{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="detail-container">
+
+        <a href="{% url 'perfumes' %}" class="back-link">
+            ← Volver al catálogo
+        </a>
+
+        <div class="detail-card">
+
+            <div class="detail-image">
+                {{ perfume.categoria|upper }}
+            </div>
+
+            <div class="detail-info">
+
+                <span class="detail-category">
+                    JACA · {{ perfume.categoria }}
+                </span>
+
+                <h1>
+                    {{ perfume.nombre }}
+                </h1>
+
+                <p class="detail-description">
+                    {{ perfume.descripcion }}
+                </p>
+
+                <div class="detail-price">
+                    ${{ perfume.precio }}
+                </div>
+
+                <div class="stock-message">
+                    <strong>Actualmente no hay existencias</strong>
+                    <p>
+                        Este perfume no se encuentra disponible por el momento.
+                    </p>
+                </div>
+
+                <a href="{% url 'perfumes' %}" class="btn btn-dark">
+                    Volver al catálogo
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
