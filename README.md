@@ -1,16 +1,4 @@
 # JACA Perfumería — Proyecto PIA
-
-Tienda de perfumes desarrollada con Django.
-
-## Incluye
-- Inicio
-- Nuestra perfumería
-- Catálogo de perfumes
-- Precios y categorías
-- Formulario de contacto con validación
-- Carga de archivos
-- Datos dinámicos desde JSON
-- Administración de perfumes mediante Django Admin
 - HTML, CSS, Bootstrap y JavaScript
 - Backend Python/Django
 
